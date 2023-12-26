@@ -57,7 +57,8 @@ module "docker_image" {
   create_ecr_repo = true
   ecr_repo        = local.ns
   image_tag       = var.image_tag
-  source_path     = "../../"
+  source_path     = "../../pack2/back2Dockerfile.cloud"
+  docker_file_path = "Dockerfile.cloud"
 }
 
 module "lambda_function_from_container_image" {
